@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, inputs, pkgs, ... }:
 
 {
   imports =
@@ -75,13 +75,7 @@
 
 
   programs.nix-ld.enable = true;
-  programs.nix-ld.libraries = with pkgs; [
-
-  ];
-  programs.bash.shellAliases = {
-    nvim = "sudo -E -s nvim";
-    rebuild = "sudo nixos-rebuild switch --flake ~/.dotfiles";
-  };
+  programs.nix-ld.libraries = with pkgs; [ ];
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -119,7 +113,17 @@
     packages = with pkgs; [
       thunderbird
       neofetch
-      steam
+      discord-canary
+      postman
+      chromium
+      gimp
+      vulkan-tools
+      inputs.firefox.packages.${pkgs.system}.firefox-nightly-bin
+      rofi-wayland
+      waybar
+      hyprpaper
+      gh
+      obsidian
     ];
   };
   nixpkgs.config.allowBroken = true;
@@ -131,13 +135,6 @@
   # Enable automatic login for the user.
   services.xserver.displayManager.autoLogin.enable = true;
   services.xserver.displayManager.autoLogin.user = "gusjengis";
-
-  # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
-  systemd.services."getty@tty1".enable = false;
-  systemd.services."autovt@tty1".enable = false;
-
-  # Install firefox.
-  programs.firefox.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -155,24 +152,15 @@
     gcc
     cargo
     wl-clipboard
-    gh
-    hyprpaper
     nwg-displays
     unzip
     wget
     fzf
-    rofi-wayland
     eww
-    discord-canary
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
     libnotify
     dunst
-    gimp
-    nodejs_23
-    chromium
-    postman
-    waybar
     pavucontrol
   ];
 
