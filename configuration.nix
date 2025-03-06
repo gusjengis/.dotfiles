@@ -119,6 +119,7 @@
     packages = with pkgs; [
       thunderbird
       neofetch
+      steam
     ];
   };
   nixpkgs.config.allowBroken = true;
@@ -155,7 +156,6 @@
     cargo
     wl-clipboard
     gh
-    steam
     hyprpaper
     nwg-displays
     unzip
