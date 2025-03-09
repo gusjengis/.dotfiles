@@ -119,14 +119,29 @@
       gimp
       vulkan-tools
       inputs.firefox.packages.${pkgs.system}.firefox-nightly-bin
-      rofi-wayland
       waybar
+      wofi
       hyprpaper
       gh
       obsidian
       blueman
     ];
   };
+
+  fonts.packages = with pkgs; [
+    noto-fonts
+    noto-fonts-cjk-sans
+    noto-fonts-emoji
+    font-awesome
+    liberation_ttf
+    fira-code
+    fira-code-symbols
+    mplus-outline-fonts.githubRelease
+    dina-font
+    proggyfonts
+  ];
+
+  programs.file-roller.enable = true;
   nixpkgs.config.allowBroken = true;
   # Turn of password for sudo, so annoying
   security.sudo.extraConfig = ''
