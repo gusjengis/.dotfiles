@@ -33,7 +33,7 @@
     themeFile = "GitHub_Dark";
     extraConfig = ''
       enable_audio_bell no
-      background_opacity 1.0
+      background_opacity 0.6
       scrollback_lines 10000
       cursor_shape block
     '';

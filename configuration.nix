@@ -124,6 +124,7 @@
       hyprpaper
       gh
       obsidian
+      blueman
     ];
   };
   nixpkgs.config.allowBroken = true;
@@ -147,6 +148,7 @@
     git
     gh
     neovim
+    gnumake
     kitty
     lazygit
     rustup
@@ -163,6 +165,8 @@
     libnotify
     dunst
     pavucontrol
+    wayland
+    wayland-protocols
   ];
 
   xdg.portal.enable = true;
