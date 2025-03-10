@@ -43,7 +43,6 @@
   programs.bash = {
     enable = true;
     initExtra = ''
-      neofetch
     '';
     shellAliases = {
       nvim = "sudo -E -s nvim";

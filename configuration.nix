@@ -125,9 +125,11 @@
       gh
       obsidian
       blueman
+      bluez
     ];
   };
-
+  hardware.bluetooth.enable = true; # enables support for Bluetooth
+  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
   fonts.packages = with pkgs; [
     noto-fonts
     noto-fonts-cjk-sans
