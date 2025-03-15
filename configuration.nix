@@ -115,7 +115,8 @@
       neofetch
       discord-canary
       postman
-      chromium
+      ungoogled-chromium
+      brave
       gimp
       vulkan-tools
       inputs.firefox.packages.${pkgs.system}.firefox-nightly-bin
@@ -184,11 +185,19 @@
     pavucontrol
     wayland
     wayland-protocols
+    openssl
+    ripgrep
+    fd
+    bat
+    libxkbcommon
+    libGL
   ];
 
   xdg.portal.enable = true;
 
   programs.thunar.enable = true;
+
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
