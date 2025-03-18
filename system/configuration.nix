@@ -110,7 +110,6 @@
       brave
       gimp
       vulkan-tools
-      inputs.firefox.packages.${pkgs.system}.firefox-nightly-bin
       waybar
       wofi
       hyprpaper
@@ -118,7 +117,6 @@
       obsidian
       blueman
       bluez
-      chromium
       youtube-music
     ];
   };

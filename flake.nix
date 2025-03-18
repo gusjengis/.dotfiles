@@ -5,8 +5,6 @@
     nixpkgs.url = "nixpkgs/nixos-24.11";
     home-manager.url = "github:nix-community/home-manager/release-24.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    firefox.url = "github:nix-community/flake-firefox-nightly";
-    firefox.inputs.nixpkgs.follows = "nixpkgs";
     hyprland.url = "github:hyprwm/Hyprland";
 
   };

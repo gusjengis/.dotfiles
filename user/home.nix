@@ -3,7 +3,8 @@
 {
 
   imports = [
-    ./user/hypr/hypr.nix
+    ./hypr/hypr.nix
+    ./programs/browser.nix
   ];
   home.username = "gusjengis";
   home.homeDirectory = "/home/gusjengis";
