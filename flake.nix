@@ -24,13 +24,13 @@
           specialArgs = {
             inherit inputs;
           };
-          modules = [ ./configuration.nix ];
+          modules = [ ./system/configuration.nix ];
         };
       };
       homeConfigurations = {
         gusjengis = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          modules = [ ./home.nix ];
+          modules = [ ./user/home.nix ];
         };
       };
     };
