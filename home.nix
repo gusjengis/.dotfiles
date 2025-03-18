@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+
+  imports = [
+    ./user/hypr/hypr.nix
+  ];
   home.username = "gusjengis";
   home.homeDirectory = "/home/gusjengis";
 
@@ -28,12 +32,12 @@
     enable = true;
     font = {
       name = "Meslo Nerd Font";
-      size = 12;
+      size = 8;
     };
     themeFile = "GitHub_Dark";
     extraConfig = ''
       enable_audio_bell no
-      background_opacity 0.6
+      background_opacity 1.0
       scrollback_lines 10000
       cursor_shape block
     '';

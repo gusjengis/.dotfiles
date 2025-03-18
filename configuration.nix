@@ -115,7 +115,6 @@
       neofetch
       discord-canary
       postman
-      ungoogled-chromium
       brave
       gimp
       vulkan-tools
@@ -127,6 +126,8 @@
       obsidian
       blueman
       bluez
+      chromium
+      youtube-music
     ];
   };
   hardware.bluetooth.enable = true; # enables support for Bluetooth
@@ -191,6 +192,7 @@
     bat
     libxkbcommon
     libGL
+    skia
   ];
 
   xdg.portal.enable = true;
