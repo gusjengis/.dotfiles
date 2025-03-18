@@ -118,6 +118,7 @@
       blueman
       bluez
       youtube-music
+      nwg-look
     ];
   };
   hardware.bluetooth.enable = true; # enables support for Bluetooth

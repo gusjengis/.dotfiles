@@ -1,11 +1,12 @@
 { config, pkgs, ... }:
-
 {
 
   imports = [
-    ./hypr/hypr.nix
+    ./desktop_env/hypr.nix
+    ./desktop_env/cursor.nix
     ./programs/browser.nix
   ];
+
   home.username = "gusjengis";
   home.homeDirectory = "/home/gusjengis";
 
@@ -57,7 +58,6 @@
   };
 
   programs.home-manager.enable = true;
-
 
   home.sessionVariables = {
     LD_LIBRARY_PATH = /run/opengl-driver/lib;
