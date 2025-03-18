@@ -4,7 +4,7 @@
   programs.chromium = {
     enable = true;
     commandLineArgs = [
-      # "--ozone-platform=wayland"
+      "--ozone-platform=x11"
       # "--enable-features=Vulkan"
     ];
   };

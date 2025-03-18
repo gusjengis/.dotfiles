@@ -1,11 +1,13 @@
 { config, pkgs, ... }:
 let
-  CURSOR_PKG = pkgs.bibata-cursors;
-  CURSOR_THEME = "Bibata-Modern-Ice";
+  CURSOR_PKG = pkgs.apple-cursor;
+  CURSOR_THEME = "macOS";
   CURSOR_SIZE = 24;
 in
 {
   home.pointerCursor = {
+    gtk.enable = true;
+    x11.enable = true;
     name = CURSOR_THEME;
     package = CURSOR_PKG;
     size = CURSOR_SIZE;
@@ -16,12 +18,6 @@ in
     name = CURSOR_THEME;
     package = CURSOR_PKG;
     size = CURSOR_SIZE;
-  };
-
-  # Apply to X applications (for compatibility)
-  xresources.properties = {
-    "Xcursor.theme" = CURSOR_THEME;
-    "Xcursor.size" = "${toString CURSOR_SIZE}";
   };
 
   # Apply settings immediately
