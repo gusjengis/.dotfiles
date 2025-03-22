@@ -1,13 +1,9 @@
 { config, pkgs, ... }:
 
 {
-  programs.hyprpaper = {
-    enable = true;
-    extraConfig = ''
-      $path = ~/Pictures/Wallpapers/wp_01.jpg
+  home.file.".config/hypr/hyprpaper.conf".text = ''
+    preload = ~/Pictures/Wallpapers/wp_01.jpg
+    wallpaper = ,~/Pictures/Wallpapers/wp_01.jpg
+  '';
 
-      preload = $path
-      wallpaper = , $path
-    '';
-  };
 }

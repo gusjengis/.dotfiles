@@ -1,10 +1,9 @@
 { config, pkgs, ... }:
 
 {
-  import = [
-    ./hyprland.nix
+  imports = [
+    ./hypr.nix
     ./cursor.nix
     ./wallpaper.nix
-    ./screenshots.nix
   ];
 }

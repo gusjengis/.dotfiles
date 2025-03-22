@@ -112,6 +112,7 @@
       waybar
       wofi
       hyprpaper
+      hyprshot
       gh
       obsidian
       blueman
