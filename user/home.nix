@@ -4,7 +4,7 @@
   imports = [
     ./desktop_env/mod.nix
     ./programs/browser.nix
-    ../../.secrets/secrets.nix
+    ~/.secrets/secrets.nix
   ];
 
   home.username = "gusjengis";
