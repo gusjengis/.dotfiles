@@ -4,7 +4,7 @@
   imports = [
     ./desktop_env/mod.nix
     ./programs/browser.nix
-    ~/.secrets/secrets.nix
+    ~/.dotfiles/user/secrets.nix
   ];
 
   home.username = "gusjengis";
@@ -61,6 +61,7 @@
 
   home.sessionVariables = {
     LD_LIBRARY_PATH = /run/opengl-driver/lib;
+    ANTHROPIC_API_KEY = config.secrets.anthropicApiKey;
   };
 
   nixpkgs.config.allowUnfree = true;
