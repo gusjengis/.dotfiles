@@ -2,9 +2,9 @@
 {
 
   imports = [
-    ./desktop_env/hypr.nix
-    ./desktop_env/cursor.nix
+    ./desktop_env/mod.nix
     ./programs/browser.nix
+    ../../.secrets/secrets.nix
   ];
 
   home.username = "gusjengis";

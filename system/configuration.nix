@@ -107,7 +107,6 @@
       neofetch
       discord-canary
       postman
-      brave
       gimp
       vulkan-tools
       waybar
