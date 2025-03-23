@@ -53,7 +53,7 @@
     shellAliases = {
       nvim = "sudo -E -s nvim";
       rebuild = "sudo nixos-rebuild switch --flake ~/.dotfiles";
-      rehome = "home-manager switch --flake ~/.dotfiles";
+      rehome = "home-manager switch --impure --flake ~/.dotfiles";
     };
   };
 

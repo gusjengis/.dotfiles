@@ -120,6 +120,8 @@
       youtube-music
     ];
   };
+
+
   hardware.bluetooth.enable = true; # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
   fonts.packages = with pkgs; [
@@ -183,6 +185,13 @@
     libxkbcommon
     libGL
     skia
+    (retroarch.override {
+      cores = with libretro; [
+        genesis-plus-gx
+        snes9x
+        beetle-psx-hw
+      ];
+    })
   ];
 
   xdg.portal.enable = true;
