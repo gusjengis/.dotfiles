@@ -107,6 +107,8 @@
       thunderbird
       neofetch
       discord-canary
+      xdg-desktop-portal-gtk
+      xdg-desktop-portal-hyprland
       postman
       gimp
       vulkan-tools
@@ -119,6 +121,12 @@
       blueman
       bluez
       youtube-music
+      unityhub
+      slack
+      grim
+      slurp
+      hyprpicker
+      swappy
     ];
   };
 
@@ -172,8 +180,6 @@
     wget
     fzf
     eww
-    xdg-desktop-portal-gtk
-    xdg-desktop-portal-hyprland
     libnotify
     dunst
     pavucontrol
