@@ -2,7 +2,7 @@
 
 {
   home.activation.clonePlinth = lib.hm.dag.entryAfter [ "createDocumentsDirs" ] ''
-    export PATH="${config.home.profileDirectory}/bin:$PATH"
+    export PATH="${pkgs.git}/bin:$PATH"
 
     clone_repo() {
     	local repo_url="$1"
