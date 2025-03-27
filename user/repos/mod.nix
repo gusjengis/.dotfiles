@@ -3,6 +3,7 @@
 {
   imports = [
     ./mosaic.nix
-    # ./plinth.nix
+    ./plinth.nix
+    ./misc.nix
   ];
 }

@@ -1,14 +1,9 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
-  home.packages = with pkgs; [
-    obsidian
-  ];
-
-  # Get main vault
-  home.activation.clonePlinth = lib.hm.dag.entryAfter [ "createDocumentsDirs" ] ''
+  home.activation.cloneMosaic = lib.hm.dag.entryAfter [ "createDocumentDirs" ] ''
     export PATH="${config.home.profileDirectory}/bin:$PATH"
-
+    
     clone_repo() {
     	local repo_url="$1"
     	local repo_name
@@ -20,9 +15,8 @@
     	fi
     }
 
-    cd ~/Documents/Obsidian/
+    cd ~/Documents/Code/
 
-    clone_repo https://github.com/gusjengis/The-Vault.git
+    clone_repo https://github.com/gusjengis/neovim-project.git
   '';
-
 }

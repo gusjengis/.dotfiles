@@ -7,7 +7,7 @@
     ./programs/mod.nix
     ./utilities/mod.nix
     ./directories/mod.nix
-    ./projects/mod.nix
+    ./repos/mod.nix
     ~/.dotfiles/user/secrets.nix
   ];
 
