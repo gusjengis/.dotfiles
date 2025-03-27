@@ -6,6 +6,8 @@
     ./desktop_env/mod.nix
     ./programs/mod.nix
     ./utilities/mod.nix
+    ./directories/mod.nix
+    ./projects/mod.nix
     ~/.dotfiles/user/secrets.nix
   ];
 
