@@ -23,7 +23,7 @@
     '';
     shellAliases = {
       nvim = "sudo -E -s nvim";
-      rebuild = "sudo nixos-rebuild switch --flake ~/.dotfiles";
+      rebuild = "sudo nixos-rebuild switch --impure --flake ~/.dotfiles";
       rehome = "home-manager switch --impure --flake ~/.dotfiles";
     };
   };

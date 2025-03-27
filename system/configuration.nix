@@ -7,8 +7,6 @@
 {
   imports =
     [
-      # Include the results of the hardware scan.
-      ./hardware/hardware-configuration.nix
       ./graphics/drivers.nix
     ];
 
