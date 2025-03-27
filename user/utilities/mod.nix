@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ./browser.nix
-    ./terminal.nix
+    ./git.nix
   ];
 }
