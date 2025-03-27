@@ -22,7 +22,10 @@
           specialArgs = {
             inherit inputs;
           };
-          modules = [ ./system/configuration.nix ];
+          modules = [
+            ./system/configuration.nix
+            /etc/nixos/hardware-configuration.nix
+          ];
         };
       };
       homeConfigurations = {
