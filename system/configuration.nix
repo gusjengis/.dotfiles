@@ -104,7 +104,6 @@
     description = "Anthony Green";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      thunderbird
       neofetch
       discord-canary
       xdg-desktop-portal-gtk
