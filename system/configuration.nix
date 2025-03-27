@@ -104,13 +104,6 @@
     description = "Anthony Green";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      xdg-desktop-portal-gtk
-      xdg-desktop-portal-hyprland
-      postman
-      vulkan-tools
-      obsidian
-      blueman
-      bluez
       unityhub
     ];
   };
@@ -150,6 +143,9 @@
   environment.systemPackages = with pkgs; [
     #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     #  wget
+    xdg-desktop-portal-gtk
+    xdg-desktop-portal-hyprland
+    vulkan-tools
     neovim
     gnumake
     lazygit

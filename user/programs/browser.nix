@@ -5,7 +5,6 @@
     enable = true;
     commandLineArgs = [
       "--ozone-platform=x11"
-      # "--enable-features=Vulkan"
     ];
   };
 }
