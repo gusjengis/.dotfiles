@@ -4,7 +4,9 @@ I'm following [this](https://www.youtube.com/watch?v=6WLaNIlDW0M&list=PL_WcXIXdD
 
 ## Installation
 1. Install NixOS with a flash drive. [Guide](https://nixos.wiki/wiki/NixOS_Installation_Guide)
-2. Run install.sh
+2. curl -LO https://github.com/gusjengis/.dotfiles/blob/master/install.sh
+3. ./install.sh
+
 Just reboot and everything should be installed.
 
 Can I turn this into a script? Hmm...
