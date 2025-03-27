@@ -3,7 +3,7 @@
 
   imports = [
     ./desktop_env/mod.nix
-    ./programs/browser.nix
+    ./programs/mod.nix
     ~/.dotfiles/user/secrets.nix
   ];
 
