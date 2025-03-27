@@ -104,28 +104,14 @@
     description = "Anthony Green";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      neofetch
-      discord-canary
       xdg-desktop-portal-gtk
       xdg-desktop-portal-hyprland
       postman
-      gimp
       vulkan-tools
-      waybar
-      wofi
-      hyprpaper
-      hyprshot
-      gh
       obsidian
       blueman
       bluez
-      youtube-music
       unityhub
-      slack
-      grim
-      slurp
-      hyprpicker
-      swappy
     ];
   };
 
@@ -188,13 +174,6 @@
     libxkbcommon
     libGL
     skia
-    (retroarch.override {
-      cores = with libretro; [
-        genesis-plus-gx
-        snes9x
-        beetle-psx-hw
-      ];
-    })
   ];
 
   xdg.portal.enable = true;

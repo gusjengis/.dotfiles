@@ -3,5 +3,6 @@
 {
   imports = [
     ./git.nix
+    ./screenshots.nix
   ];
 }
