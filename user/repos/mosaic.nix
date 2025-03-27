@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 
 {
-  home.activation.cloneMosaic = lib.hm.dag.entryAfter [ "createDocumentDirs" ] ''
+  home.activation.cloneMosaic = lib.hm.dag.entryAfter [ "createDocumentsDirs" ] ''
     export PATH="${config.home.profileDirectory}/bin:$PATH"
     
     clone_repo() {

@@ -22,6 +22,5 @@
     clone_repo https://github.com/gusjengis/Plinth-Web.git
     clone_repo https://github.com/gusjengis/Plinth-Web-Build.git
     clone_repo https://github.com/gusjengis/Plinth-Hello-World.git
-
   '';
 }

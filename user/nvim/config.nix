@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 
 {
-  home.activation.cloneMisc = lib.hm.dag.entryAfter [ "createDocumentsDirs" ] ''
+  home.activation.cloneNeovimConfig = lib.hm.dag.entryAfter [ "createDocumentsDirs" ] ''
     export PATH="${config.home.profileDirectory}/bin:$PATH"
     
     clone_repo() {
@@ -15,8 +15,8 @@
     	fi
     }
 
-    cd ~/Documents/Code/
+    cd ~/.config/
 
-    clone_repo https://github.com/gusjengis/neovim-project.git
+    clone_repo https://github.com/gusjengis/nvim.git
   '';
 }

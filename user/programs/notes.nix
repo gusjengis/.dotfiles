@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   home.packages = with pkgs; [
@@ -6,7 +6,7 @@
   ];
 
   # Get main vault
-  home.activation.clonePlinth = lib.hm.dag.entryAfter [ "createDocumentsDirs" ] ''
+  home.activation.cloneVaults = lib.hm.dag.entryAfter [ "createDocumentsDirs" ] ''
     export PATH="${config.home.profileDirectory}/bin:$PATH"
 
     clone_repo() {
