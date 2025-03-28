@@ -15,4 +15,5 @@ Each .sh file should trigger a reboot, once they've both run everything should b
 Use gh auth login to setup git credentials
 Add secret keys back to ~/.dotfiles/user/secrets.nix
 Go to ~/.local/share/nvim/lazy/avante.nvim/ and run make BUILD_FROM_SOURCE=true
-
+rustup default stable
+rustup target add wasm32-unknown-unknown
