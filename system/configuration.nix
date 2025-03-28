@@ -57,7 +57,7 @@
   #    inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
   #};
 
-  hardware.opengl.enable = true;
+  hardware.graphics.enable = true;
 
   # services.desktopManager.plasma6.enable = true;
 
@@ -123,8 +123,8 @@
   '';
 
   # Enable automatic login for the user.
-  services.xserver.displayManager.autoLogin.enable = true;
-  services.xserver.displayManager.autoLogin.user = "gusjengis";
+  services.displayManager.autoLogin.enable = true;
+  services.displayManager.autoLogin.user = "gusjengis";
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -134,7 +134,6 @@
   environment.systemPackages = with pkgs; [
     git
     kitty
-    acpi
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
     vulkan-tools
