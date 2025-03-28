@@ -23,5 +23,6 @@
       clone_repo https://github.com/gusjengis/Mosaic-Hub.git
       clone_repo https://github.com/gusjengis/Mosaic-Android.git
       clone_repo https://github.com/gusjengis/Mosaic-Logger-Hyprland.git
+      clone_repo https://github.com/gusjengis/Mosaic-Snitch.git
     '';
 }
