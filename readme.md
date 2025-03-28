@@ -4,10 +4,10 @@ I'm following [this](https://www.youtube.com/watch?v=6WLaNIlDW0M&list=PL_WcXIXdD
 
 ## Installation
 1. Install NixOS with a flash drive. [Guide](https://nixos.wiki/wiki/NixOS_Installation_Guide)
-2. curl -LO https://github.com/gusjengis/.dotfiles/blob/master/install.sh
+2. curl -LO https://raw.githubusercontent.com/gusjengis/.dotfiles/refs/heads/master/install.sh
 3. chmod +x install.sh
 4. ./install.sh
-5. curl -LO https://github.com/gusjengis/.dotfiles/blob/master/home-manager.sh
+5. curl -LO https://raw.githubusercontent.com/gusjengis/.dotfiles/refs/heads/master/home-manager.sh
 6. chmod +x home-manager.sh
 7. ./home-manager.sh
 
