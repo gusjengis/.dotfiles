@@ -18,5 +18,6 @@
     cd ~/Documents/Code/
 
     clone_repo https://github.com/gusjengis/neovim-project.git
+    clone_repo https://github.com/gusjengis/todo.git
   '';
 }
