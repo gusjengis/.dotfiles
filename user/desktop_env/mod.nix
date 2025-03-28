@@ -7,5 +7,6 @@
     ./cursor.nix
     ./wallpaper.nix
     ./app_launcher.nix
+    ./theme.nix
   ];
 }

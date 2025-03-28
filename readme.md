@@ -12,5 +12,7 @@ I'm following [this](https://www.youtube.com/watch?v=6WLaNIlDW0M&list=PL_WcXIXdD
 7. ./home-manager.sh
 
 Each .sh file should trigger a reboot, once they've both run everything should be installed.
-After that use gh auth login to setup git credentials, and add secret keys back to ~/.dotfiles/user/secrets.nix
+Use gh auth login to setup git credentials
+Add secret keys back to ~/.dotfiles/user/secrets.nix
+Go to ~/.local/share/nvim/lazy/avante.nvim/ and run make BUILD_FROM_SOURCE=true
 
