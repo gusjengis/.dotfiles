@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   programs.chromium = {
@@ -7,11 +7,8 @@
       "--ozone-platform=x11"
       "--enable-unsafe-webgpu"
       "--enable-features=Vulkan"
-      "--enable-features=WebContentsForceDark"
     ];
-    extensions = [
-      "iobmefdldoplhmonnnkchglfdeepnfhd"
-      "eimadpbcbfnmbkopoojfekhnkhdbieeh"
-    ];
+    extensions =
+      [ "iobmefdldoplhmonnnkchglfdeepnfhd" "eimadpbcbfnmbkopoojfekhnkhdbieeh" ];
   };
 }

@@ -5,10 +5,7 @@
 { config, inputs, pkgs, ... }:
 
 {
-  imports =
-    [
-      ./graphics/drivers.nix
-    ];
+  imports = [ ./graphics/drivers.nix ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   # Bootloader.
@@ -27,7 +24,6 @@
 
   # Set your time zone.
   time.timeZone = "America/Los_Angeles";
-
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
@@ -57,13 +53,13 @@
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
-    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+    package =
+      inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
   };
 
   hardware.opengl.enable = true;
 
   # services.desktopManager.plasma6.enable = true;
-
 
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [ ];
@@ -101,14 +97,12 @@
     isNormalUser = true;
     description = "Anthony Green";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      unityhub
-    ];
+    packages = with pkgs; [ unityhub ];
   };
 
-
   hardware.bluetooth.enable = true; # enables support for Bluetooth
-  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
+  hardware.bluetooth.powerOnBoot =
+    true; # powers up the default Bluetooth controller on boot
   fonts.packages = with pkgs; [
     noto-fonts
     noto-fonts-cjk-sans

@@ -1,5 +1,4 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
   programs.home-manager.enable = true;
 
   imports = [
@@ -21,12 +20,8 @@
     enable = true;
     userName = "gusjengis";
     userEmail = "anthony.j.green@outlook.com";
-    extraConfig = {
-      credential.helper = "store";
-    };
+    extraConfig = { credential.helper = "store"; };
   };
-
-
 
   home.sessionVariables = {
     LD_LIBRARY_PATH = /run/opengl-driver/lib;

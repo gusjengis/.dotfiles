@@ -3,7 +3,7 @@
 {
   home.activation.cloneMisc = lib.hm.dag.entryAfter [ "createDocumentsDirs" ] ''
     export PATH="${pkgs.git}/bin:$PATH"
-    
+
     clone_repo() {
     	local repo_url="$1"
     	local repo_name

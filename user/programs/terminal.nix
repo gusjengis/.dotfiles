@@ -16,11 +16,9 @@
     '';
   };
 
-
   programs.bash = {
     enable = true;
-    initExtra = ''
-    '';
+    initExtra = "";
     shellAliases = {
       nvim = "sudo -E -s nvim";
       rebuild = "sudo nixos-rebuild switch --impure --flake ~/.dotfiles";

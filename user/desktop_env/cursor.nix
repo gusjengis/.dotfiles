@@ -3,8 +3,7 @@ let
   CURSOR_PKG = pkgs.apple-cursor;
   CURSOR_THEME = "macOS";
   CURSOR_SIZE = 24;
-in
-{
+in {
   home.pointerCursor = {
     gtk.enable = true;
     x11.enable = true;

@@ -1,9 +1,5 @@
 { config, pkgs, ... }:
 
 {
-  imports = [
-    ./mosaic.nix
-    ./plinth.nix
-    ./misc.nix
-  ];
+  imports = [ ./mosaic.nix ./plinth.nix ./misc.nix ];
 }

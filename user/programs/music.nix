@@ -1,7 +1,5 @@
 { config, pkgs, ... }:
 
 {
-  home.packages = with pkgs; [
-    youtube-music
-  ];
+  home.packages = with pkgs; [ youtube-music ];
 }

@@ -1,9 +1,7 @@
 { config, pkgs, lib, ... }:
 
 {
-  home.packages = with pkgs; [
-    obsidian
-  ];
+  home.packages = with pkgs; [ obsidian ];
 
   # # Get main vault
   # home.activation.cloneVaults = lib.hm.dag.entryAfter [ "createDocumentsDirs" ] ''
@@ -15,11 +13,11 @@
   #
   #   	repo_name=$(basename -s .git "$repo_url")
   #
-    # 	if [ ! -d "$repo_name" ]; then
-    # 	  git clone "$repo_url"
-    # 	fi
-    # }
-    #
+  # 	if [ ! -d "$repo_name" ]; then
+  # 	  git clone "$repo_url"
+  # 	fi
+  # }
+  #
   #   cd ~/Documents/Obsidian/
   #
   #   clone_repo https://github.com/gusjengis/The-Vault.git

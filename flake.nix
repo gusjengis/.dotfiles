@@ -9,19 +9,16 @@
 
   };
 
-  outputs = { self, nixpkgs, home-manager, ... } @ inputs:
+  outputs = { self, nixpkgs, home-manager, ... }@inputs:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-    in
-    {
+    in {
       nixosConfigurations = {
         nixos = lib.nixosSystem {
           inherit system;
-          specialArgs = {
-            inherit inputs;
-          };
+          specialArgs = { inherit inputs; };
           modules = [
             ./system/configuration.nix
             /etc/nixos/hardware-configuration.nix

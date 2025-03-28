@@ -1,7 +1,5 @@
 { config, pkgs, ... }:
 
 {
-  home.packages = with pkgs; [
-    pavucontrol
-  ];
+  home.packages = with pkgs; [ pavucontrol ];
 }

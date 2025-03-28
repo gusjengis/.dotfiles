@@ -1,26 +1,27 @@
 { config, pkgs, lib, ... }:
 
 {
-  home.activation.cloneMosaic = lib.hm.dag.entryAfter [ "createDocumentsDirs" ] ''
-    export PATH="${pkgs.git}/bin:$PATH"
-    
-    clone_repo() {
-    	local repo_url="$1"
-    	local repo_name
+  home.activation.cloneMosaic =
+    lib.hm.dag.entryAfter [ "createDocumentsDirs" ] ''
+      export PATH="${pkgs.git}/bin:$PATH"
 
-    	repo_name=$(basename -s .git "$repo_url")
+      clone_repo() {
+      	local repo_url="$1"
+      	local repo_name
 
-    	if [ ! -d "$repo_name" ]; then
-    	  git clone "$repo_url"
-    	fi
-    }
+      	repo_name=$(basename -s .git "$repo_url")
 
-    cd ~/Documents/Code/
+      	if [ ! -d "$repo_name" ]; then
+      	  git clone "$repo_url"
+      	fi
+      }
 
-    clone_repo https://github.com/gusjengis/Mosaic-Backend.git
-    clone_repo https://github.com/gusjengis/Mosaic-Model.git
-    clone_repo https://github.com/gusjengis/Mosaic-Hub.git
-    clone_repo https://github.com/gusjengis/Mosaic-Android.git
-    clone_repo https://github.com/gusjengis/Mosaic-Logger-Linux.git
-  '';
+      cd ~/Documents/Code/
+
+      clone_repo https://github.com/gusjengis/Mosaic-Backend.git
+      clone_repo https://github.com/gusjengis/Mosaic-Model.git
+      clone_repo https://github.com/gusjengis/Mosaic-Hub.git
+      clone_repo https://github.com/gusjengis/Mosaic-Android.git
+      clone_repo https://github.com/gusjengis/Mosaic-Logger-Linux.git
+    '';
 }
