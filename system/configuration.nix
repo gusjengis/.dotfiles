@@ -135,7 +135,6 @@
   environment.systemPackages = with pkgs; [
     git
     kitty
-    acpi
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
     vulkan-tools
