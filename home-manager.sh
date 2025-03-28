@@ -14,4 +14,5 @@ nix-shell '<home-manager>' -A install
 
 # Apply home-manager configuration
 echo -e "\n${GREEN}Applying home-manager configuration...${NC}"
+cd ~/.dotfiles
 home-manager switch --impure --flake . && reboot
