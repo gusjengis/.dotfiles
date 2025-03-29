@@ -9,6 +9,10 @@
       "--enable-features=Vulkan"
     ];
     extensions =
-      [ "iobmefdldoplhmonnnkchglfdeepnfhd" "eimadpbcbfnmbkopoojfekhnkhdbieeh" ];
+      [
+        "iobmefdldoplhmonnnkchglfdeepnfhd" # Google Search Keyboard Shortcuts
+        "eimadpbcbfnmbkopoojfekhnkhdbieeh" # Dark Reader
+        "jpkfgepcmmchgfbjblnodjhldacghenp" # Pie Adblock
+      ];
   };
 }
