@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./idle.nix
     ./hyprland.nix
     ./status_bar.nix
     ./cursor.nix
