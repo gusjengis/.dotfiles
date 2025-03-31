@@ -16,7 +16,7 @@
       	fi
       }
 
-      cd ~/Documents/Code/
+      cd ~/Documents/Code/Plinth/
 
       clone_repo https://github.com/gusjengis/Plinth-Core.git
       clone_repo https://github.com/gusjengis/Plinth-Util.git

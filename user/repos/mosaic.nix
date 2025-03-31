@@ -16,7 +16,7 @@
       	fi
       }
 
-      cd ~/Documents/Code/
+      cd ~/Documents/Code/Mosaic/
 
       clone_repo https://github.com/gusjengis/Mosaic-Backend.git
       clone_repo https://github.com/gusjengis/Mosaic-Model.git
@@ -24,5 +24,6 @@
       clone_repo https://github.com/gusjengis/Mosaic-Android.git
       clone_repo https://github.com/gusjengis/Mosaic-Logger-Hyprland.git
       clone_repo https://github.com/gusjengis/Mosaic-Snitch.git
+      clone_repo https://github.com/gusjengis/Mosaic-Docs.git
     '';
 }
