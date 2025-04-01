@@ -1,5 +1,5 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ./bluetooth.nix ./git.nix ./screenshots.nix ./audio.nix ];
+  imports = [ ./bluetooth.nix ./git.nix ./screenshots.nix ./audio.nix ./disk.nix];
 }
