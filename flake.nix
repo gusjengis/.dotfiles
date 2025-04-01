@@ -14,6 +14,7 @@
       lib = nixpkgs.lib;
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
+      alga = inputs.alga.packages.${system}.default;
     in
     {
       nixosConfigurations = {
@@ -29,6 +30,7 @@
       homeConfigurations = {
         gusjengis = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
+          extraSpecialArgs = { inherit alga; };
           modules = [ ./user/home.nix ];
         };
       };
