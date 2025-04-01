@@ -7,5 +7,6 @@
     ./screenshots.nix
     ./audio.nix
     ./disk.nix
+    ./lg_tv.nix
   ];
 }

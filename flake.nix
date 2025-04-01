@@ -6,7 +6,7 @@
     home-manager.url = "github:nix-community/home-manager/release-24.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-
+    alga.url = "github:Tenzer/alga";
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
@@ -14,7 +14,8 @@
       lib = nixpkgs.lib;
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-    in {
+    in
+    {
       nixosConfigurations = {
         nixos = lib.nixosSystem {
           inherit system;
