@@ -139,6 +139,7 @@
     xdg-desktop-portal-hyprland
     vulkan-tools
     neovim
+    mermaid-cli
     gnumake
     lazygit
     rustup
