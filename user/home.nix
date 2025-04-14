@@ -9,7 +9,6 @@
     ./repos/mod.nix
     ./nvim/mod.nix
     ~/.dotfiles/user/secrets.nix
-    ./vr/mod.nix
   ];
 
   home.username = "gusjengis";
