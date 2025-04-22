@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 
 {
-  home.activation.clonePlinth =
+  home.activation.cloneCircuits =
     lib.hm.dag.entryAfter [ "createDocumentsDirs" ] ''
       export PATH="${pkgs.git}/bin:$PATH"
 
@@ -16,7 +16,7 @@
       	fi
       }
 
-      cd ~/Documents/Circuits
+      cd ~/Documents/Circuits/
 
       clone_repo https://github.com/gusjengis/audio_circuit.git
     '';
