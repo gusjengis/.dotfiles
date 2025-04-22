@@ -3,6 +3,7 @@
 {
   imports = [
     ./browser.nix
+    ./circuit_design.nix
     ./development.nix
     ./email_client.nix
     ./file_explorer.nix

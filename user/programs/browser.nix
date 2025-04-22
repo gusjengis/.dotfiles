@@ -13,6 +13,8 @@
         "iobmefdldoplhmonnnkchglfdeepnfhd" # Google Search Keyboard Shortcuts
         "eimadpbcbfnmbkopoojfekhnkhdbieeh" # Dark Reader
         "jpkfgepcmmchgfbjblnodjhldacghenp" # Pie Adblock
+        "aeblfdkhhhdcdjpifhhbdiojplfjncoa" # 1Password
+        "eiimnmioipafcokbfikbljfdeojpcgbh" # BlockSite
       ];
   };
 }
