@@ -15,6 +15,8 @@
         "jpkfgepcmmchgfbjblnodjhldacghenp" # Pie Adblock
         "aeblfdkhhhdcdjpifhhbdiojplfjncoa" # 1Password
         "eiimnmioipafcokbfikbljfdeojpcgbh" # BlockSite
+        "mgngbgbhliflggkamjnpdmegbkidiapm" # Remove YouTube Shorts
+        "lcpclaffcdiihapebmfgcmmplphbkjmd" # Block YouTube Feed
       ];
   };
 }
