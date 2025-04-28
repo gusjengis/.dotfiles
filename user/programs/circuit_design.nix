@@ -2,7 +2,7 @@
 
 {
   home.packages = with pkgs; [
-    kicad
-    ngspice
+#    kicad
+#    ngspice # might work, just don't need it singce kicad doesn't
   ];
 }

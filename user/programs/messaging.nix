@@ -1,5 +1,8 @@
 { config, pkgs, ... }:
 
 {
-  home.packages = with pkgs; [ discord-canary slack ];
+  home.packages = with pkgs; [ 
+  #  discord-canary 
+  #  slack 
+  ];
 }
