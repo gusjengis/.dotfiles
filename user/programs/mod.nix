@@ -12,6 +12,7 @@
     ./messaging.nix
     ./music.nix
     ./notes.nix
+    ./recording.nix
     ./terminal.nix
   ];
 }

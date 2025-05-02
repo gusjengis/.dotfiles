@@ -145,6 +145,7 @@
     rustup
     gcc
     cargo
+    nodejs_23
     wl-clipboard
     nwg-displays
     unzip
