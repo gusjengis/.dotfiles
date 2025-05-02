@@ -1,5 +1,8 @@
 { config, pkgs, ... }:
 
 {
-  home.packages = with pkgs; [ postman ];
+  home.packages = with pkgs; [
+    postman
+    docker
+  ];
 }
