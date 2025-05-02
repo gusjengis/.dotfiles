@@ -21,5 +21,6 @@
     clone_repo https://github.com/agreenweb/imagequeue-client.git
     clone_repo https://github.com/agreenweb/imagequeue-admin.git
     clone_repo https://github.com/agreenweb/imagequeue-server.git
+    clone_repo https://github.com/agreenweb/imagequeue-shared.git
   '';
 }
