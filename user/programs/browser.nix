@@ -17,6 +17,7 @@
         "eiimnmioipafcokbfikbljfdeojpcgbh" # BlockSite
         "mgngbgbhliflggkamjnpdmegbkidiapm" # Remove YouTube Shorts
         "lcpclaffcdiihapebmfgcmmplphbkjmd" # Block YouTube Feed
+        "ifbmcpbgkhlpfcodhjhdbllhiaomkdej" # Office - Enable Cut, Copy, and Paste
       ];
   };
 }

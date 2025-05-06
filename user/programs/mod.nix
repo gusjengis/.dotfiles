@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./audio.nix
     ./browser.nix
     ./circuit_design.nix
     ./development.nix
