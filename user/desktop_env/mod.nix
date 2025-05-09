@@ -9,6 +9,6 @@
     ./wallpaper.nix
     ./app_launcher.nix
     ./theme.nix
-    ./lock_screen.nix
+    # ./lock_screen.nix
   ];
 }
