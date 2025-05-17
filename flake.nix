@@ -7,6 +7,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     alga.url = "github:Tenzer/alga";
+    nix-flatpak.url = "github:gmodena/nix-flatpak";
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
@@ -30,8 +31,11 @@
       homeConfigurations = {
         gusjengis = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          extraSpecialArgs = { inherit alga; };
-          modules = [ ./user/home.nix ];
+          extraSpecialArgs = { inherit inputs; inherit alga; };
+          modules = [ 
+            inputs.nix-flatpak.homeManagerModules.nix-flatpak
+            ./user/home.nix 
+          ];
         };
       };
     };
