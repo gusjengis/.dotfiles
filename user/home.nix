@@ -1,4 +1,5 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, lib, ... }: 
+{
   programs.home-manager.enable = true;
 
   imports = [

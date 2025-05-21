@@ -2,8 +2,7 @@
 
 {
   home.packages = with pkgs; [
-    postman
-    docker
-    blender
+    kicad
+    ngspice
   ];
 }

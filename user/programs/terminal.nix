@@ -20,9 +20,15 @@
     enable = true;
     initExtra = "";
     shellAliases = {
-      nvim = "sudo -E -s nvim";
       rebuild = "sudo nixos-rebuild switch --impure --flake ~/.dotfiles";
       rehome = "home-manager switch --impure --flake ~/.dotfiles";
+      pipes = "pipes-rs";
     };
   };
+
+  home.packages = with pkgs; [ pipes-rs ];
+
+  home.file.".config/pipes-rs/config.toml".source =
+    ~/.dotfiles/user/config_files/pipes-rs/config.toml;
+  home.file.".config/pipes-rs/config.toml".force = true;
 }

@@ -47,6 +47,14 @@
    services.xserver.displayManager.gdm.enable = true;
    services.xserver.desktopManager.gnome.enable = true;
 
+  services.gnome.gnome-keyring.enable = true;
+
+  # make sure PAM starts it for console/TTY and display-manager log-ins:
+  security.pam.services = {
+    login.enableGnomeKeyring = true;
+    gdm.enableGnomeKeyring = true; # or sddm, etc.
+  };
+
   # Enable Hyprland <
   #services.xserver.displayManager.gdm.wayland = true;
 
@@ -87,7 +95,8 @@
     # no need to redefine it in your config for now)
     #media-session.enable = true;
   };
-
+  # Enable dbus for something?
+  programs.dconf.enable = true;
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
@@ -96,7 +105,7 @@
     isNormalUser = true;
     description = "Anthony Green";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [ unityhub ];
+    packages = with pkgs; [ ];
   };
 
   hardware.bluetooth.enable = true; # enables support for Bluetooth
@@ -129,6 +138,8 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  nixpkgs.config.permittedInsecurePackages = [ "dotnet-sdk-6.0.428" ]; 
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -138,11 +149,16 @@
     xdg-desktop-portal-hyprland
     vulkan-tools
     neovim
+    roslyn-ls
+    dotnetCorePackages.dotnet_8.sdk
+    mono
+    mermaid-cli
     gnumake
     lazygit
     rustup
     gcc
     cargo
+    nodejs_23
     wl-clipboard
     nwg-displays
     unzip
