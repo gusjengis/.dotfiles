@@ -152,7 +152,6 @@
     neovim
     roslyn-ls
     dotnetCorePackages.dotnet_8.sdk
-    mono
     mermaid-cli
     gnumake
     lazygit
