@@ -1,7 +1,7 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
-  home.file.".config/hypr/hyprland.conf".source =
-    ../config_files/hypr/hyprland.conf;
-  home.file.".config/hypr/hyprland.conf".force = true;
+  home.activation.symlinkHyprlandConf = lib.hm.dag.entryAfter ["writeBoundary"] ''
+    ln -sf $HOME/.dotfiles/user/config_files/hypr/hyprland.conf $HOME/.config/hypr/hyprland.conf
+  '';
 }
