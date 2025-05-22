@@ -151,7 +151,7 @@
     vulkan-tools
     neovim
     roslyn-ls
-    dotnetCorePackages.dotnet_8.sdk
+    dotnetCorePackages.dotnet_9.sdk
     mermaid-cli
     gnumake
     lazygit

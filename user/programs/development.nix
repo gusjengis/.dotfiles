@@ -5,5 +5,6 @@
     postman
     docker
     blender
+    jetbrains.rider
   ];
 }
