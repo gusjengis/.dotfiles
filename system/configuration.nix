@@ -2,12 +2,20 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, inputs, pkgs, ... }:
+{
+  config,
+  inputs,
+  pkgs,
+  ...
+}:
 
 {
   imports = [ ./graphics/drivers.nix ];
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -61,8 +69,7 @@
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
-    package =
-      inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
   };
 
   hardware.graphics.enable = true;
@@ -105,13 +112,15 @@
   users.users.gusjengis = {
     isNormalUser = true;
     description = "Anthony Green";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
     packages = with pkgs; [ ];
   };
 
   hardware.bluetooth.enable = true; # enables support for Bluetooth
-  hardware.bluetooth.powerOnBoot =
-    true; # powers up the default Bluetooth controller on boot
+  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
   fonts.packages = with pkgs; [
     noto-fonts
     noto-fonts-cjk-sans
@@ -139,7 +148,7 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  nixpkgs.config.permittedInsecurePackages = [ "dotnet-sdk-6.0.428" ]; 
+  nixpkgs.config.permittedInsecurePackages = [ "dotnet-sdk-6.0.428" ];
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -150,6 +159,7 @@
     xdg-desktop-portal-hyprland
     vulkan-tools
     neovim
+    nixfmt-rfc-style
     roslyn-ls
     dotnetCorePackages.dotnet_9.sdk
     mermaid-cli
