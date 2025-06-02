@@ -5,7 +5,7 @@
     enable = true;
     font = {
       name = "Meslo Nerd Font";
-      size = 8;
+      size = 9;
     };
     themeFile = "GitHub_Dark";
     extraConfig = ''
@@ -23,6 +23,8 @@
       rebuild = "sudo nixos-rebuild switch --impure --flake ~/.dotfiles";
       rehome = "home-manager switch --impure --flake ~/.dotfiles";
       pipes = "pipes-rs";
+      venv = ". .venv/bin/activate";
+      vim = "nvim";
     };
   };
 
