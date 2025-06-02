@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   home.activation.cloneMisc = lib.hm.dag.entryAfter [ "createDocumentsDirs" ] ''
@@ -17,10 +22,10 @@
 
     cd ~/Documents/Code/
 
-    clone_repo https://github.com/gusjengis/neovim-project.git
-    clone_repo https://github.com/gusjengis/todo.git
     clone_repo https://github.com/gusjengis/mermaid-class-diagrams.git
     clone_repo https://github.com/gusjengis/lsp-servers.git
     clone_repo https://github.com/gusjengis/lsp-servers-cli.git
   '';
 }
+
+# clone_repo https://github.com/gusjengis/neovim-project.git

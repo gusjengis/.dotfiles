@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }: 
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 {
   programs.home-manager.enable = true;
 
@@ -15,13 +20,15 @@
   home.username = "gusjengis";
   home.homeDirectory = "/home/gusjengis";
 
-  home.stateVersion = "24.11";
+  home.stateVersion = "25.05";
 
   programs.git = {
     enable = true;
     userName = "gusjengis";
     userEmail = "anthony.j.green@outlook.com";
-    extraConfig = { credential.helper = "store"; };
+    extraConfig = {
+      credential.helper = "store";
+    };
   };
 
   home.sessionVariables = {

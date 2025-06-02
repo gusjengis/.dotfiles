@@ -11,7 +11,7 @@
     commandLineArgs = [
       "--ozone-platform=x11"
       # "--enable-unsafe-webgpu"
-      "--enable-features=Vulkan"
+      # "--enable-features=Vulkan"
     ];
     extensions = [
       "iobmefdldoplhmonnnkchglfdeepnfhd" # Google Search Keyboard Shortcuts
