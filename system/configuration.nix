@@ -2,21 +2,30 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, inputs, pkgs, ... }:
+{
+  config,
+  inputs,
+  pkgs,
+  ...
+}:
 
 {
   imports = [ ./graphics/drivers.nix ];
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "nixos"; # Define your hostname.
-  networking.wireless.enable =
-    true; # Enables wireless support via wpa_supplicant.
+  networking.wireless.enable = true; # Enables wireless support via wpa_supplicant.
   networking.wireless.networks = {
-    "Casa de la Muerte" = { psk = "crackerbox"; };
+    "Casa de la Muerte" = {
+      psk = "crackerbox";
+    };
   };
 
   # Configure network proxy if necessary
@@ -46,6 +55,8 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
+  services.udisks2.enable = true;
+  services.gvfs.enable = true;
 
   # Enable the GNOME Desktop Environment.
   # services.xserver.displayManager.gdm.enable = true;
@@ -65,8 +76,7 @@
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
-    package =
-      inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
   };
 
   hardware.graphics.enable = true;
@@ -109,13 +119,15 @@
   users.users.gusjengis = {
     isNormalUser = true;
     description = "Anthony Green";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
     packages = with pkgs; [ ];
   };
 
   hardware.bluetooth.enable = true; # enables support for Bluetooth
-  hardware.bluetooth.powerOnBoot =
-    true; # powers up the default Bluetooth controller on boot
+  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
   fonts.packages = with pkgs; [
     noto-fonts
     noto-fonts-cjk-sans
@@ -163,7 +175,7 @@
     rustup
     gcc
     cargo
-    nodejs_23
+    nodejs_24
     wl-clipboard
     nwg-displays
     unzip
@@ -182,6 +194,8 @@
     libxkbcommon
     libGL
     skia
+    gvfs
+    udiskie
   ];
 
   xdg.portal.enable = true;

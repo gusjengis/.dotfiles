@@ -1,8 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  home.packages = with pkgs; [ 
-    diskonaut 
+  home.packages = with pkgs; [
     dust
   ];
 }
