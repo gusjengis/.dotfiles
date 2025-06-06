@@ -5,5 +5,7 @@
     xfce.thunar
     xfce.tumbler
     xfce.thunar-volman
+    gvfs
+    qimgv
   ];
 }
